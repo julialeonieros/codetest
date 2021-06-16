@@ -15,33 +15,44 @@ const Main = () => {
     },[])
 
   return (
-    <Wrapper>
+    // <Wrapper>
+    <>
       <Header>
-        <H1>Visitkort</H1>
+        <H1>Our business cards</H1>
       </Header>
       <CardContainer>
         {businessCard.map(item => (
           <Card {...item} key={item.id}/>
         ))}
       </CardContainer>
-    </Wrapper>
+    </>
+
+    // </Wrapper>
   )
 }
 
 export default Main
 
 const Wrapper = styled.div`
-  border: solid black 2px;
+  border: solid purple 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
   width: 1000px;
+  background-color: #999;
 `
 const CardContainer = styled.div`
+  border: solid green 2px;
+  width: 95%;
+  margin: 0 auto 45px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 `
 const Header = styled.header`
   background-color: pink;
+  margin-top: 30px;
 `
 const H1 = styled.h1`
   font-weight: bold;
