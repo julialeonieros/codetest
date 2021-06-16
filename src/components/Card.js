@@ -14,7 +14,8 @@ const Card = ({ image, name, surName, email, telephone }) => {
       />
       <TextContainer>
         <NameContainer>
-          <Name>{name} {surName}</Name>
+          <Name>{name}</Name>
+          <Name>{surName}</Name>
         </NameContainer>
         <Contacts>{telephoneNr}</Contacts>
         <Contacts>{email}</Contacts>
@@ -26,7 +27,7 @@ const Card = ({ image, name, surName, email, telephone }) => {
 export default Card
 
 const CardContainer = styled.div`
-  border: solid black 2px;
+  border: solid #999 0,1px;
   background-color: #FFF;
   width: 350px;
   height: 185px;
@@ -38,8 +39,10 @@ const CardContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  @media (min-width: 767px){
-
+  &:hover {
+    width: 367px;
+    height: 195px;
+    transition-duration: 0.3s;
   }
 `
 const IMG = styled.img`
@@ -50,18 +53,18 @@ const IMG = styled.img`
 const TextContainer = styled.div`
 `
 const NameContainer = styled.div`
-  // border-bottom: solid #000 1px;
-  border: solid #000 1px;
-  margin-bottom: 5px;
-  width: -moz-fit-content;
+  border-bottom: solid #000 1px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
   width: fit-content;
 `
 const Name = styled.p`
   font-family: 'Trocchi', serif;
   font-weight: bold;
   font-size: 25px;
-  display: inline-block;
 `
 const Contacts = styled.p`
   font-size: 14px;
+  margin: 3px 0;
+  display: inline-block;
 `
