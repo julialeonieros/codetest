@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 const Footer = () => {
+  
   return (
     <Wrapper>
-      <a title="Gå till kontaktformulär" href="https://www.cgi.com/se/sv/cgi-sverige">
+      <a title="Gå till kontaktformulär" href="https://www.cgi.com/se/sv/kontakt">
         <Button>Kontakt</Button>
       </a>
     </Wrapper>

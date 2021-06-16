@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-
 const Header = () => {
 
   return (
@@ -37,11 +36,13 @@ const Logo = styled.div`
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  text-align: center;
   line-height: 60px;
   background-color: #5236ab;
   color: #FFF;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const Nav = styled.nav`
   margin-left: 30px;
@@ -77,4 +78,3 @@ const Div = styled.div`
   background-color: #000;
   border-radius: 5px;
 `
-

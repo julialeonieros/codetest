@@ -6,7 +6,6 @@ import Header from '../components/Header'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
 
-
 const Main = () => {
 
   const [businessCard, setBusinessCard] = useState([])
@@ -21,7 +20,7 @@ const Main = () => {
     <>
       <Header />
       <Wrapper>
-        <H1 tabIndex='0'>Våra visitkort</H1>
+        <H1 tabIndex="0">Våra visitkort</H1>
         <CardContainer>
           {businessCard.map(item => (
             <Card {...item} key={item.id}/>
@@ -38,9 +37,7 @@ export default Main
 const Wrapper = styled.div`
   margin-top: 100px;
 `
-
 const CardContainer = styled.div`
-  border: solid green 2px;
   width: 95%;
   margin: 20px auto 45px;
   display: flex;
@@ -51,6 +48,10 @@ const CardContainer = styled.div`
     flex-direction: row;
     flex-flow: wrap;
     justify-content: space-around;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: space-evenly;
   }
 `
 const H1 = styled.h1`

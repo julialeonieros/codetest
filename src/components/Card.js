@@ -5,7 +5,6 @@ const Card = ({ image, name, surName, email, telephone }) => {
 
   const formattedNumber = `${telephone.slice(0, 3)} - ${telephone.slice(3,6)} ${telephone.slice(6, 8)} ${telephone.slice(8, 10)}`
 
-
   return (
     <CardContainer tabIndex='0'>
       <IMG
@@ -44,6 +43,10 @@ const CardContainer = styled.div`
     height: 195px;
     transition-duration: 0.3s;
   }
+
+  @media (min-width: 1024px){
+    margin: 15px 10px 25px;
+  }
 `
 const IMG = styled.img`
   width: 105px;
@@ -61,7 +64,7 @@ const NameContainer = styled.div`
   margin-bottom: 7px;
   width: fit-content;
 `
-const Name = styled.p`
+const Name = styled.h2`
   font-family: 'Trocchi', serif;
   font-weight: bold;
   font-size: 25px;
