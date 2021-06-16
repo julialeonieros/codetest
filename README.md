@@ -3,7 +3,8 @@
 ## Dependencies
 * NodeJS
 * React
-* Styled components 
+* Styled components
+* React-tabindex (npm install react-tabindex)
 
 ### Run app 
 `npm start`

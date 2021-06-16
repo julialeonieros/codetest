@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import { URL } from '../reusables/URL'
 import Header from '../components/Header'
@@ -20,11 +20,14 @@ const Main = () => {
   return (
     <>
       <Header />
-      <CardContainer>
-        {businessCard.map(item => (
-          <Card {...item} key={item.id}/>
-        ))}
-      </CardContainer>
+      <Wrapper>
+        <H1 tabIndex='0'>Våra visitkort</H1>
+        <CardContainer>
+          {businessCard.map(item => (
+            <Card {...item} key={item.id}/>
+          ))}
+        </CardContainer>
+      </Wrapper>
       <Footer />
     </>
   )
@@ -32,10 +35,14 @@ const Main = () => {
 
 export default Main
 
+const Wrapper = styled.div`
+  margin-top: 100px;
+`
+
 const CardContainer = styled.div`
   border: solid green 2px;
   width: 95%;
-  margin: 0 auto 45px;
+  margin: 20px auto 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,4 +52,8 @@ const CardContainer = styled.div`
     flex-flow: wrap;
     justify-content: space-around;
   }
+`
+const H1 = styled.h1`
+  font-weight: bold;
+  text-align: center;
 `

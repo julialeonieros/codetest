@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 const Footer = () => {
   return (
     <Wrapper>
-      <a href="https://www.cgi.com/se/sv/cgi-sverige">
+      <a title="Gå till kontaktformulär" href="https://www.cgi.com/se/sv/cgi-sverige">
         <Button>Kontakt</Button>
       </a>
     </Wrapper>
@@ -33,4 +33,5 @@ const Button = styled.button`
   color: #5236ab;
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
 `

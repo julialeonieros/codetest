@@ -3,11 +3,11 @@ import styled from 'styled-components/macro'
 
 const Card = ({ image, name, surName, email, telephone }) => {
 
-  const telephoneNr = `${telephone.slice(0, 3)} - ${telephone.slice(3,6)} ${telephone.slice(6, 8)} ${telephone.slice(8, 10)}`
+  const formattedNumber = `${telephone.slice(0, 3)} - ${telephone.slice(3,6)} ${telephone.slice(6, 8)} ${telephone.slice(8, 10)}`
 
 
   return (
-    <CardContainer>
+    <CardContainer tabIndex='0'>
       <IMG
         src={image}
         alt={`${name} ${surName}`}  
@@ -17,7 +17,7 @@ const Card = ({ image, name, surName, email, telephone }) => {
           <Name>{name}</Name>
           <Name>{surName}</Name>
         </NameContainer>
-        <Contacts>{telephoneNr}</Contacts>
+        <Contacts>{formattedNumber}</Contacts>
         <Contacts>{email}</Contacts>
       </TextContainer>
     </CardContainer>
@@ -49,6 +49,9 @@ const IMG = styled.img`
   width: 105px;
   margin-right: 20px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const TextContainer = styled.div`
 `
@@ -64,7 +67,7 @@ const Name = styled.p`
   font-size: 25px;
 `
 const Contacts = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   margin: 3px 0;
   display: inline-block;
 `
