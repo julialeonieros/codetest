@@ -1,4 +1,5 @@
 # Mock-site for business cards
+A one-pager fetching business cards from restful API. If I had more time I would have worked more with the cards and made them pop up on hover, maybe also adding more breakpoints. 
 
 ## Dependencies
 * (npm)

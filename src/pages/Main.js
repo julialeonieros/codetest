@@ -53,6 +53,10 @@ const CardContainer = styled.div`
   @media (min-width: 1024px) {
     justify-content: space-evenly;
   }
+
+  @media (min-width: 1200px) {
+    width: 1130px;
+  }
 `
 const H1 = styled.h1`
   font-weight: bold;
